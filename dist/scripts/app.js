@@ -4,7 +4,7 @@
   //CONFIURE(ROUTE) EACH OCNTROLLER,VIEW,URL TO A SPECIFIC STATE(UNIQUE BEHAVIORAL PLACE IN APP) and change UIVIEW based on state.
   function config($locationProvider, $stateProvider){
     $locationProvider
-      .html5Model({
+      .html5Mode({
         enabled: true,
         requireBase: false
     });
