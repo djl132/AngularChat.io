@@ -1,11 +1,11 @@
 (function(){
-  function chatController(Room, $modal){
+  function chatController(Room, $uibModal){
     this.rooms = Room.all;
     this.add = Room.add; /*write an add function*/ 
     
     /*function that opens a modal*/
     this.open = function () {
-      var modalInstance = $modal.open({
+      var modalInstance = $uibModal.open({
         templateUrl: '/templates/newRoom.html',
         controller: 'chatController as chat'    
         });
@@ -14,7 +14,7 @@
   
   angular
     .module('blocChat')
-    .controller('chatController', ['Room', '$modal', chatController]);
+    .controller('chatController', ['Room', '$uibModal', chatController]);
 })();
 
 

@@ -8,10 +8,10 @@
    
     var room = {};
     
-   room.add = function(room){
-        rooms.$add({"roomName": room}).then(ref){
-            this.all.push(ref);}
-    };
+//   room.add = function(room){
+//        room.$add({"roomName": room}).then(ref){
+//            this.all.push(ref);} 
+//    };
     
     room.all = rooms;
   
