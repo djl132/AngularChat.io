@@ -8,6 +8,6 @@
   
   angular
     .module('blocChat')
-    .controller('ModalCtrl', [$modalInstance, ModalCtrl]);
+    .controller('ModalCtrl', ['$modalInstance', ModalCtrl]);
   
 })();
