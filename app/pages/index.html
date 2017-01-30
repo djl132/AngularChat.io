@@ -2,9 +2,22 @@
 <html ng-app="blocChat"> <!-- ng-app: designates the root element of the application -->
 <head lang="en">
     <title>blocChat</title>
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
 </head>
 <body>
+    <nav class="navbar"> 
+      
+      <a href="index.html" class="logo">
+        hi
+      </a>
     
+      <div class="links-container">
+        <a ui-sref="chat" class="navbar-link">ChatLogo</a>
+      </div>
+      
+    </nav>
+  
     <ui-view></ui-view> 
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>

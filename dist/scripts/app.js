@@ -10,7 +10,7 @@
     });
     
     $stateProvider
-      .state('home', {
+      .state('chat', {
         url:'/',//informs Angular that it is root.
         templateUrl: '/templates/home.html',
         controller: 'chatController as chat'

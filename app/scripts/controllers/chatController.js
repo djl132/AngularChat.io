@@ -1,6 +1,7 @@
 (function(){
   function chatController(Room){
     this.rooms = Room.all;
+    this.add = Room.add;
   }
   
   angular
