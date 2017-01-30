@@ -9,7 +9,7 @@
     var room = {};
     
     room.add = function(room){
-      room.$add({"roomName": room}).then(ref){
+      room.$add({"roomName": room}).then(function(ref){
           this.all.push(ref);} 
     };
     

@@ -7,7 +7,7 @@
     this.open = function () {
       var modalInstance = $uibModal.open({
         templateUrl: '/templates/newRoom.html',
-        controller: 'chatController as chat'    
+        controller: 'ModalCtrl as dialog'    
         });
       };
   }
