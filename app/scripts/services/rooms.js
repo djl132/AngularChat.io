@@ -11,8 +11,8 @@
     room.all = rooms;
     
     room.add = function(room){
-      rooms.$add({"roomName": room}).then(function(ref){
-          rooms.push(ref);});
+      rooms.$add({$value:room});
+//      room = "";
     }
   
     return room;

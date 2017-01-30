@@ -1,7 +1,10 @@
 <div>
-  <h1>Add New Room</h1>
-  <hr>
-  <h3>Name of room</h3>
-  <input type="text" ng-model="name">
-  <button ng-click="modal.add(name)">Add Room</button>
+  
+  <form ng-submit="modal.add(name)">
+        <h1>Add New Room</h1>
+        <hr>
+        <h3>Name of room :</h3>
+        <input type="text" ng-model="name"/>
+        <input type="submit" value="Add"/>
+  </form>
 </div>
