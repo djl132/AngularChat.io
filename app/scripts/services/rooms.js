@@ -8,12 +8,13 @@
    
     var room = {};
     
+    room.all = rooms;
+    
     room.add = function(room){
       room.$add({"roomName": room}).then(function(ref){
-          this.all.push(ref);} 
-    };
+          this.all.push(ref);});
+    }
     
-    room.all = rooms;
   
     return room;
   }
