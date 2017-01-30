@@ -20,6 +20,6 @@
   
   
   angular
-    .module('blocChat', ['firebase','ui.router'])
+    .module('blocChat', ['firebase','ui.router','ui.bootstrap'])
     .config(config); // create provider service using uirouter to configure controllers(components) managing the app by states(wireframes)
 })();
