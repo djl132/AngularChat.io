@@ -11,10 +11,9 @@
     room.all = rooms;
     
     room.add = function(room){
-      room.$add({"roomName": room}).then(function(ref){
-          this.all.push(ref);});
+      rooms.$add({"roomName": room}).then(function(ref){
+          rooms.push(ref);});
     }
-    
   
     return room;
   }
