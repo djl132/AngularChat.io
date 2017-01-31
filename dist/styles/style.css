@@ -29,29 +29,40 @@ html, body{
   top:0;
   bottom: 0;
 }
-.room {
-  background-color: aqua;
-  float: left;  
-  position: absolute; /*normal stacking, give message divs coordinate*/
-  height: 100%;
-  bottom: 0;
-  width:80%; 
-  color:black;
-/*  clear: both;*/
-}
 
 .rooms{
   float:left;  
   background-color: darkseagreen;
-  position: absolute;
   height: 100%;
   right: 0;
   width: 20%;
   color:black;
 }
 
-.messages{
+.room {
+  position: relative;   
+  background-color: aqua;
+  float: left;  
+  height: 100%;
+  bottom: 0;
+  width:80%; 
+  color:black;
+/*  clear: both;*/
+  box-sizing: border-box;
+}
+
+.messageContainer{
   width: 70%;
-  
-  background-color: white;
+  height: auto;
+  background-color: gray;
+  scroll-overflow: hidden;
+}
+
+.title{
+  height: 10%;
+  position: absolute;
+  background-color: antiquewhite;
+  top:0;
+  right:0;
+  left:0;
 }
