@@ -1,2 +1,13 @@
-<div class="chat" ng-repeat="room in chat.rooms">{{room.$value}}</div>
-<button ng-click="chat.open()">Add Room</button>
+<div class="room col-lg-8 col-md-3">
+  <div class="messages"> hi</div>
+  <div class="messages"> hi</div>
+</div>
+
+
+<div class="row rooms">
+  <div class="col-xs-12 col-md-9">
+    <div class="chat" ng-repeat="room in chat.rooms">{{room.$value}}</div>
+    <button ng-click="chat.open()">Add Room</button>
+  </div>
+</div>
+

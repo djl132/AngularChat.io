@@ -1,0 +1,57 @@
+*{
+  padding: 0;
+  margin: 0;
+  
+}
+
+html, body{
+  height: 100%;
+  position: relative;
+}
+
+.view{
+  position: relative;
+  height: 100%;
+}
+
+/*NAVBAR*/
+.navbar{
+  z-index: 9999;
+  height: 10%;
+  border-radius: 0; 
+  margin-bottom: 0;
+  
+}
+
+.navbar-link {
+  position: absolute;
+  right: 0;
+  top:0;
+  bottom: 0;
+}
+.room {
+  background-color: aqua;
+  float: left;  
+  position: absolute; /*normal stacking, give message divs coordinate*/
+  height: 100%;
+  bottom: 0;
+  width:80%; 
+  color:black;
+/*  clear: both;*/
+}
+
+.rooms{
+  float:left;  
+  background-color: darkseagreen;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  width: 20%;
+  color:black;
+}
+
+.messages{
+  width: 70%;
+  
+  background-color: white;
+}
