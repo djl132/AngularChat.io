@@ -4,3 +4,36 @@
   
 }
 
+
+
+.roomName {
+  text-align: left;
+  color: #ab9ba9;
+  list-style-type: none;
+}
+
+/*
+.listings_header {
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+  margin: 0 1rem 0.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ab9ba9;
+  width: 165px;
+  position: relative;
+}
+*/
+
+.sidebar {
+  height: 100%;
+}
+
+.header {
+  position: fixed;
+    top: 0;
+    left: 0;
+    height: 53px;
+    width: 100%;
+}
