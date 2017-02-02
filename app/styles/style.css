@@ -1,10 +1,27 @@
 *{
   padding: 0;
-  margin: 0;
-  
+  margin: 0; 
 }
 
+html {
+  line-height: 1;
+  position: relative;
+  height: 100%;
+  font-size: 16px;
+  font-family: Lato, sans-serif;
+}
 
+/*IMPORTANT*/
+body {
+  /*make canvas cover entirepage%*/
+  height: 100%; /*WHY DOES UNDOING THIS, MAKE IT STRETCH TO FILL THE ENTIRE PAGE AND IGNORE PADDINGS?*/
+  width: 100%;
+  margin: 0;
+  
+  /*create room for header & footer*/
+  padding-top: 53px;
+  padding-bottom: 64px;
+}
 
 .roomName {
   text-align: left;
@@ -12,28 +29,128 @@
   list-style-type: none;
 }
 
-/*
-.listings_header {
-  text-align: left;
-  font-size: 0.8rem;
-  line-height: 1.25rem;
-  margin: 0 1rem 0.1rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #ab9ba9;
-  width: 165px;
-  position: relative;
-}
-*/
-
 .sidebar {
   height: 100%;
 }
 
 .header {
-  position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     height: 53px;
-    width: 100%;
+    width: 100%; /*width of 100% of what?*/
+    z-index: 999;
+}
+
+/*BlocChat title*/
+.appTitle {
+    position: relative; /*POSITION SENDERCONTAINER*/
+    width: 220px; /*giv the h2 a div length*/
+    height: 53px;
+    line-height: 53px;/*why does this lineheight work?*/
+    font-weight: 900;
+    padding: 0px 1rem;
+    color: #ffffff;
+    background: #3e313c; 
+    float:left ; /*important - FLOATS THE TOPICTITLE*/
+    cursor: pointer;
+    border-bottom: 2px solid white;
+}
+
+.topicContainer {
+  display: inline-block; /*give it width, but same line as blocChatTitle*/
+  padding-left: 1.5rem;
+  padding-right: 0.5rem;
+  line-height: 53px; /*align with BlocChatTitle*/
+  color: #555459;
+  float: left; /*float textleft*/
+}
+
+.rooms-header {
+  text-align: left;
+  font-size: 1.0rem;
+  line-height: 1.5rem;
+  color:#ab9ba9;
+  padding: 0 1rem;
+}
+
+.rooms {
+  height: 100%;
+  width: 220px;
+  background-color:#4d394b ;
+  float: left; /*position to the left of chat div......hmm....why float left?*/
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+.main {
+  height: 100%; /*MAKE ROOMS STRETCH TOP TO BOTTOM*/
+}
+
+/*how do I color this header?*/
+.topicHeader {
+  width: 80%;
+}
+
+.roomNames {
+  text-align: left;
+  padding-left: 0.5rem; /*what exactly does rem stand for?*/
+}
+
+/*how do I make the width auto?*/
+.messageContainer {
+  margin-left: 220px;
+  overflow-y: auto;
+  height: 100%; /*100%height of parent(aka,body)*/
+  padding: 0 18px 1rem 1.5rem; /*makes text messages RESPONSIVE*/
+  overflow: scroll; /*what is this for? there is no cnage when I take this thing off.*/
+  overflow-x: hidden;/*DONT'REALLY NEED THIS DO WE?*/
+}
+
+.message {
+  padding-bottom: 30px;
+}
+
+/*how do I seleect the first instance of the class*/
+.message: first-of-type{
+  padding-top: 0px;
+}
+
+
+
+
+
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 64px;
+  width: 100%;
+  background-color: antiquewhite;
+}
+
+.senderContainer {
+  height: 100%;
+  margin-left: 220px;
+}
+
+.senderBox {
+  font-size: 0.95rem;
+  width: 90%;
+  margin-left: 2%;
+  margin-bottom: auto;/*what does this do?*/
+  line-height: 1.2rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 0.2rem;
+  background-clip: padding-box;
+  color: #3d3c40;
+  box-shadow: none;
+  outline: 0;
+  bottom: 0;
+  min-height: 41px !important;
+  padding: 9px 5px 9px 8px;
 }
