@@ -1,7 +1,8 @@
 (function(){
-  function chatController(Room, $uibModal){
+  function chatController(Room, $uibModal, Message){
     this.rooms = Room.all;
-    this.add = Room.add; /*write an add function*/ 
+    this.add = Room.add;/*write an add function*/ 
+    this.message = Message; /*message operations GET AND SETS ROOMID*/
     
      /*function that opens a modal*/
     this.open = function () {
@@ -15,7 +16,7 @@
   
   angular
     .module('blocChat')
-    .controller('chatController', ['Room', '$uibModal', chatController]);
+    .controller('chatController', ['Room', '$uibModal','Message', chatController]);
 })();
 
 

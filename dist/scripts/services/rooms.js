@@ -10,9 +10,15 @@
     
     room.all = rooms;
     
+    room.currentRoomId = null;
+    
     room.add = function(room){
       rooms.$add({$value:room});
 //      room = "";
+    }
+    
+    room.setRoom = function(roomId){
+      room.currentRoomId = roomId;
     }
   
     return room;
