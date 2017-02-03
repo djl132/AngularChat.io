@@ -17,7 +17,7 @@
     <h3 class="rooms-header">Rooms</h3>
     <button ng-click="chat.open()">Add Room</button>
     <ul class="roomNames">
-      <li><div class="chat" roomId="{{room.$key}}" ng-click="chat.message.getRoomById(roomId)" ng-repeat="room in chat.rooms">#{{room.$value}}</div></li>
+      <li><div class="chat" ng-repeat="room in chat.rooms"><div ng-click="chat.message.getRoomById(room.$id)">#{{room.$value}}</div></div></li>
     </ul>
   </div>
 <!--  /*MESSAGE-ROOM*/-->
