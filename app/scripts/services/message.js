@@ -1,13 +1,20 @@
+//PROVIDE MESSAGES AND GETTING MESSAGES AND SENDING MESSAGES
 (function() {
-  function Message($firebaseArray) {
-    var ref = firebase.database().ref().child("messages");
+  function Message($firebaseArray, $cookies) {
+    var ref = firebase.database().ref().child("messages"); //create query object for messags.
+    var messages = $firebaseArray(ref); //FOR UPDATING BACKEN
     
     var Message = {
-      currentMessages : null,
+      currentMessages : messages,
+      currentRoomId : null,
       getRoomById: function(roomId){
-        // this === Message
+        
+        //store value for messages sent in a room
+        Message.currentRoomId = roomId;
+        
+        //if there is a roomId store it.
         ref.orderByChild("roomId").equalTo(roomId).on("value", function(data){
-          // on value returns an object containing query data
+          // on value returns an object containing query data that is the ocntnet inside of hte 
           // val() property on data returns the actual object
           var messages = data.val();
                     
@@ -27,6 +34,11 @@
           // currentMessages, which is why this code did not work
           //this.currentMessages = messages;
         });
+      },
+      
+      //update MESSAGES OBJECT ABOUT new messages
+      send: function(message){
+        messages.$add({content:message, roomId: Message.currentRoomId, username: $cookies.get('blocChatCurrentUser')});
       }
     };
     
@@ -35,7 +47,7 @@
 
   angular
     .module('blocChat')
-    .factory('Message', ['$firebaseArray', Message]);
+    .factory('Message', ['$firebaseArray','$cookies', Message]);
 })();
 
 

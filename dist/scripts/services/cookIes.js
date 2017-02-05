@@ -5,7 +5,6 @@
   function BlocChatCookies($cookies, $uibModal){
     //STORE CURRENT USERNAME
     this.currentUser = $cookies.get('blocChatCurrentUser');
-    console.log( $cookies.get('blocChatCurrentUser'));
 //    CHECK IF THERE IS A USERNAME
     if(!currentUser || currentUser === ''){
 //      GET COOKIE iNFO (user info) THROUGH A MODAL
