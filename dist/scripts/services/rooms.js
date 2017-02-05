@@ -14,7 +14,6 @@
     
     room.add = function(room){
       rooms.$add({$value:room});
-//      room = "";
     }
     
     room.setRoom = function(roomId){

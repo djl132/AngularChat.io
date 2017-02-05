@@ -2,7 +2,6 @@
   
   /*refer to the modalInstance that was just created*/
   function ModalCtrl($uibModalInstance, Room){
-//      this.add = Room.add;
     this.room = Room;
     this.add = Room.add;
   }
